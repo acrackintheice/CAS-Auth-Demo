@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'"/>
+<form th:action="@{/Login}" method="post">
+    <input type="submit" th:value="Login"></input>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"></input>
+</form>
+<br></br>
+<br></br>
+<a th:href="@{/greetings}">Go to Greetings</a>
+</body>
+</html>
